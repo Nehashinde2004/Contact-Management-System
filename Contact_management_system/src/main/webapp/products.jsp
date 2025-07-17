@@ -1,1 +1,0 @@
-<a href="admin_login.jsp" class="admin-login"><i class="bi bi-person"></i>Admin Login</a> 
