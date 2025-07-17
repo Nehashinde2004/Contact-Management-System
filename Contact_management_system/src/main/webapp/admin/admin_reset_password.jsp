@@ -1,0 +1,1 @@
+<div class="alert alert-success mt-2">Password reset successful! You can now <a href='admin/admin_login.jsp'>login</a>.</div> 

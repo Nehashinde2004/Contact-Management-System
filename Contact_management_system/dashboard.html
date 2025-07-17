@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ContactManager Dashboard</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-title">ContactManager</div>
+      <nav>
+        <ul>
+          <li class="active"><i class="fa fa-home"></i> Dashboard</li>
+          <li><i class="fa fa-user-plus"></i> Add Contact</li>
+          <li><i class="fa fa-address-book"></i> View All Contacts</li>
+          <li><i class="fa fa-search"></i> Search Contact</li>
+          <li><i class="fa fa-edit"></i> Update/Delete Contact</li>
+          <li><i class="fa fa-cog"></i> Settings</li>
+        </ul>
+      </nav>
+      <div class="sidebar-logout">
+        <i class="fa fa-sign-out-alt"></i> Logout
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main">
+      <!-- Topbar -->
+      <header class="topbar">
+        <div class="search-bar">
+          <input type="text" placeholder="Search">
+          <i class="fa fa-search"></i>
+        </div>
+        <div class="profile-menu">
+          <div class="profile-icon">
+            <i class="fa fa-user"></i>
+          </div>
+          <div class="profile-dropdown">
+            <a href="#">View Profile</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dashboard Content -->
+      <section class="dashboard">
+        <h1>Welcome, Neha <span class="wave">👋</span></h1>
+        <div class="stats-cards">
+          <div class="card">
+            <div class="card-icon"><i class="fa fa-users"></i></div>
+            <div class="card-label">Total Contacts</div>
+            <div class="card-value">120</div>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fa fa-plus-square"></i></div>
+            <div class="card-label">Recently Added</div>
+            <div class="card-value">5</div>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fa fa-trash"></i></div>
+            <div class="card-label">Deleted Contacts</div>
+            <div class="card-value">3</div>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="primary">Add New Contact</button>
+          <button class="primary">Import/Export CSV</button>
+        </div>
+        <div class="recent-contacts">
+          <h2>Recent Contacts</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Rahul M.</td>
+                <td>rahul@email.com</td>
+                <td>9876543210</td>
+                <td>
+                  <a href="#" class="edit">Edit</a>
+                  <a href="#" class="delete">Delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Priya S.</td>
+                <td>priya@email.com</td>
+                <td>8123456788</td>
+                <td>
+                  <a href="#" class="edit">Edit</a>
+                  <a href="#" class="delete">Delete</a>
+                </td>
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html> 

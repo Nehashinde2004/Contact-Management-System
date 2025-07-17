@@ -1,0 +1,1 @@
+<a href="admin_reset_password.jsp" class="text-secondary" style="font-size: 0.9em;">Forgot password?</a> 
