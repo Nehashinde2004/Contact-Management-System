@@ -1,105 +1,110 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Welcome to Eco Eats</title>
+    <title>Contact Management System - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { background: #f8f9fa; }
-        .hero-section { background: #219150; color: #fff; padding: 60px 0 40px 0; }
-        .card { border: none; border-radius: 16px; }
-        .card-title { font-weight: 600; }
-        .category-card .card-title { font-size: 1.3em; }
-        .category-card .btn { margin-top: 10px; }
-        .footer { background: #fff; color: #888; padding: 20px 0 0 0; font-size: 0.95em; }
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            min-height: 100vh;
+            width: 100vw;
+            overflow-x: hidden;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(40,40,40,0.65), rgba(40,40,40,0.65)), url('images/bg.jpg') no-repeat center center/cover;
+            min-height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+        }
+        .topbar {
+            width: 100%;
+            background: rgba(60, 60, 60, 0.85);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 48px;
+            height: 72px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+        .brand {
+            color: #fff;
+            font-size: 2.4rem;
+            font-weight: bold;
+            letter-spacing: 4px;
+            text-shadow: 2px 2px 8px #222;
+            text-transform: uppercase;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .nav-links a {
+            color: #fff;
+            font-size: 1.18rem;
+            margin-left: 36px;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.2s;
+            vertical-align: middle;
+        }
+        .nav-links a:hover {
+            color: #e0e0e0;
+        }
+        .center-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .main-title {
+            color: #fff;
+            font-size: 3.3rem;
+            font-weight: bold;
+            text-shadow: 3px 3px 12px #222;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .subtitle {
+            color: #fff;
+            font-size: 1.25rem;
+            text-shadow: 2px 2px 8px #222;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin-bottom: 0;
+        }
+        @media (max-width: 600px) {
+            .brand { font-size: 1.2rem; letter-spacing: 2px; }
+            .main-title { font-size: 1.3rem; letter-spacing: 1px; }
+            .subtitle { font-size: 0.95rem; }
+            .topbar { padding: 0 8px; height: 52px; }
+            .nav-links a { margin-left: 12px; font-size: 0.95rem; }
+        }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <div class="hero-section text-center">
-        <div class="container">
-            <h1 class="display-4 fw-bold">Welcome to Eco Eats</h1>
-            <p class="lead mb-4">Your one-stop destination for fresh, organic groceries and eco-friendly products. We believe in sustainable living and healthy eating.</p>
-            <a href="products" class="btn btn-light btn-lg px-4">Shop Now</a>
-        </div>
-    </div>
-
-    <!-- Feature Cards Section -->
-    <div class="container my-5">
-        <div class="row text-center">
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h3 class="card-title"><span style="font-size:2em;">🌱</span> <span class="text-success">Fresh & Organic</span></h3>
-                        <p class="card-text">All our products are carefully selected for freshness and quality. We source directly from local farmers.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h3 class="card-title"><span style="font-size:2em;">♻️</span> <span class="text-success">Eco-Friendly</span></h3>
-                        <p class="card-text">We offer a wide range of sustainable and eco-friendly products to help you live a greener lifestyle.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h3 class="card-title"><span style="font-size:2em;">🚚</span> <span class="text-success">Fast Delivery</span></h3>
-                        <p class="card-text">Quick and reliable delivery to your doorstep. We ensure your groceries arrive fresh and on time.</p>
-                    </div>
-                </div>
+    <div class="hero-bg">
+        <div class="topbar">
+            <div class="brand">CONTACT MS</div>
+            <div class="nav-links">
+                <a href="login.jsp">Login</a>
+                <a href="register.jsp">Register</a>
             </div>
         </div>
-    </div>
-
-    <!-- Shop by Category Section -->
-    <div class="container my-5">
-        <h2 class="text-center mb-4">Shop by Category</h2>
-        <div class="row text-center">
-            <div class="col-md-3 mb-4">
-                <div class="card h-100 shadow-sm category-card">
-                    <div class="card-body">
-                        <h4 class="card-title"><span style="font-size:1.5em;">🍎</span> Fruits</h4>
-                        <p class="card-text">Fresh and seasonal fruits</p>
-                        <a href="products?category=fruits" class="btn btn-outline-success">View Fruits</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card h-100 shadow-sm category-card">
-                    <div class="card-body">
-                        <h4 class="card-title"><span style="font-size:1.5em;">🥦</span> Vegetables</h4>
-                        <p class="card-text">Organic vegetables</p>
-                        <a href="products?category=vegetables" class="btn btn-outline-success">View Vegetables</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card h-100 shadow-sm category-card">
-                    <div class="card-body">
-                        <h4 class="card-title"><span style="font-size:1.5em;">🥛</span> Dairy</h4>
-                        <p class="card-text">Fresh dairy products</p>
-                        <a href="products?category=dairy" class="btn btn-outline-success">View Dairy</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card h-100 shadow-sm category-card">
-                    <div class="card-body">
-                        <h4 class="card-title"><span style="font-size:1.5em;">🌿</span> Eco-Friendly</h4>
-                        <p class="card-text">Sustainable products</p>
-                        <a href="products?category=eco" class="btn btn-outline-success">View Eco Products</a>
-                    </div>
-                </div>
-            </div>
+        <div class="center-content" style="padding-top: 72px;">
+            <div class="main-title">CONTACT MANAGEMENT SYSTEM</div>
+            <div class="subtitle">Start Collecting your contacts in a very smarter way. We provide very efficient and smarter way to handle contacts.</div>
         </div>
     </div>
-
-    <!-- Footer -->
-    <div class="footer text-center">
-        &copy; 2025 Eco Eats Explorers. All rights reserved.
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html> 
